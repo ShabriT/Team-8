@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <h1>Task List</h1>
+  <div class="card mb-4 mx-auto my-4" style="max-width: 400px;">
+    <h2>New Task</h2>
+    <div class="task-input mb-3">
+      <label for="task-name">Task Name:</label>
+      <input type="text" id="task-name">
+    </div>
+
+    <div class="task-input mb-3">
+      <label for="task-description">Task Description:</label>
+      <textarea id="task-description" name="task-description"></textarea>
+    </div>
+
+    <div class="task-input mb-3">
+      <label for="task-assigned">Assigned To:</label>
+      <input type="text" id="task-assigned" name="task-assigned">
+    </div>
+
+    <div class="task-input mb-3">
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" name="due-date">
+    </div>
+    
+    <button id="add-task-btn">Add Task</button>
+
+    <div class="task=input mb-3">
+        <label for="task-status">Task Status:</label>
+        <select id="task-status" name="task-status">
+            <option value="in-progress">In Progress</option>
+            <option value="pending">Pending</option>
+            <option value="Done">Done</option>
+    </div>
+
+    </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
