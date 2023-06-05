@@ -1,101 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv=”X-UA-Compatible” content="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="../Team-8/assets/css/style.css"/> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
-
 <body>
+    <form class="card">
+        <h1>Task List</h1> <br>
+        <h3>Add New Task</h3>
 
-    <nav class="navbar">
+        <div class="mb-3">
+         <label for="" class="form-label">Task Name</label>
+          <input type="text" class="form-control" id="" placeholder="">
+        </div>
 
-	<ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-	  <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+        <div class="mb-3">
+          <label for="" class="form-label">Task Description</label>
+          <input type="text" class="form-control" id="" placeholder="">
+        </div>
 
-    </ul> 
-	</nav>
+        <div class="mb-3">
+          <label for="" class="form-label">Assigned to:</label>
+          <input type="text" class="form-control" id="" placeholder="">
+        </div>
 
+        <div class="row">
+          <div class="col">
+            <label for="" class="form-label">Due Date:</label>
+            <input type="date" class="form-control" placeholder="" aria-label="">
+          </div>
 
-    <section id="home">
-	    <div class="main">
-			<h1 class="headings">CHINYEREZE EZEIGBO</h1>
-			<buttton class="btn">
-				Hire me
-			</buttton>
-			<div id="profile">
-				<a href="https://github.com/Ceze711"><strong>GitHub</strong></a>
-				<a href="https://www.linkedin.com/in/chinyereze-ezeigbo-0849b8221/"><strong>LinkedIn</strong></a>
-				<a href="https://docs.google.com/document/d/1iXw2asSXm88tZJHI92dgUHEXzcIii8fCE3dD8LIE45Y/edit"><strong>Resume</strong></a>
+          <div class="col">
+            <label for="" class="form-label">Task Status:</label>
+            <select class="form-select" id="inlineFormSelectPref">
+              <option selected>Choose...</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Pending">Pending</option>
+              <option value="Done">Done</option>
+            </select>
+          </div>
+        </div>
 
-			</div>
-		</div>	
-    </section> 
-
-	<section id="about">
-		<h1 class="headings">ABOUT ME</h1>
-		<div id="pic"></div>
-	 	<img src="image1.JPG" alt="About Me Image" type="About Me Image">
-	 	<div id="intro">
-		<h2>CHINYEREZE EZEIGBO</h2>
-		<p>I am a well-trained startup Web Developer imbued with professionalism, <br> dedication and enthusiasm in my work, and marching on to great accomplishements <br> as I leap forward towards the zenith of this profession, to always provide quality <br> work of global acceptability with finesse!</p>
-  		</div>
-   	  	</div>
-  	</section>
-
-  	<section id="portfolio">
-	  <h1 class="headings">PORTFOLIO</h1>
-  	  <div class="gallery">
-        <img src="https://cdn.pixabay.com/photo/2020/08/09/14/25/business-5475661_1280.jpg" alt="Portfolio image 1" title="Portfolio Image 1">
-	    <img src="https://cdn.pixabay.com/photo/2017/02/20/14/18/technology-2082642_1280.jpg" alt="Portfolio Image 2" title="Portfolio Image 2">
-	    <img src="https://cdn.pixabay.com/photo/2019/03/27/16/40/iot-4085382_1280.jpg" alt="Portfolio Image 3" title="Portfolio Image 3">
-	    <img src="https://cdn.pixabay.com/photo/2016/04/14/07/56/icon-1328421_1280.jpg" alt="Portfolio Image 4" title="Portfolio Image 4">
-	    <img src="https://cdn.pixabay.com/photo/2016/04/04/14/12/monitor-1307227_1280.jpg" alt="Portfolio Image 5" title="Portfolio Image 5">
-	    <img src="https://cdn.pixabay.com/photo/2018/05/16/20/07/technology-3406895_1280.jpg" alt="Portfolio Image 6" title="Portfolio Image 6">
-	  </div>
-
- 	</section>
-
-	<section id="skills">
-	  	<h1 class="headings">SKILLS</h1>
-      <div class="row">
-	    <div class="box">
-	  	<img src="https://cdn.pixabay.com/photo/2020/01/18/20/55/website-4776406_1280.png" alt="">
-	  	 <h1 class="headings">Website Design</h1>
-	  	 <p>Utilizing extant tech languages and technology to make Responsive Web-designs</p>
-      </div>
-
-
-	  <div class="box">
-	  	<img src="https://cdn.pixabay.com/photo/2019/01/31/20/52/web-3967926_1280.jpg" alt="">
-	  	<h1 class="headings">Fix <br>Bugs</h1>
-	  	<p>Ensuring functioning and seamless websites</p>
-      </div>
-
-	  <div class="box">
-	  	<img src="https://cdn.pixabay.com/photo/2016/04/13/22/42/seo-1327870_1280.png" alt="">
-	  	<h1 class="headings">HTML<br>Git<br>CSS<br>Bootstrap<br>Javascript<br> GitHub</h1>
-	  	<p>Expanding your business global reach with comprehensive Web Design</p>
-      </div>
-	 </div>
-  	</section>
-
-	<section id="contact">
-	  <h1 class="headings">CONTACT</h1>
-	  <form action="" class="form">
-   	  <input type="text" name="name" class="input" placeholder="Enter Your Name">
-	  <input type="email" name="email" class="input" Placeholder="Enter Your Email">
-	  <textarea name="msg" id="msg" cols="30" rows="10" Placeholder="Enter Your Message"></textarea>
-	  <input type="submit" value="SEND" id="send">
-	  </form>
-  	</section>
-
-</body> 
+        <br>
+         <div class="container">
+          <div class="row">
+            <div class="col">
+              <!--<button class="btn btn-danger form-control  btn-block" routerLink='/login'>Delete Task</button></div> -->
+              <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Add Task</button></div>
+            <div class="col">
+              <button id="btnSubmit" class="btn btn-primary form-control btn-block" type="submit" (click)="onSubmit()">Delete Task</button></div>
+          </div>
+        </div>
+    </form>
+    
+</body>
 </html>
