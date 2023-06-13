@@ -12,4 +12,3 @@ const validFormFieldInput = (event) => {
     }
     
      button.addEventListener('click', validFormFieldInput);
-
