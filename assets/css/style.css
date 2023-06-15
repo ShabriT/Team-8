@@ -9,13 +9,14 @@ body {
     background-size: cover;
 }
 
-.card {
+.form {
     max-width: 1000px;
     max-height: 1500px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    color:rgb(56, 74, 241);
+    color: white;
+    /*color:rgb(56, 74, 241);*/
     margin-top: 8%;
     margin-left: 20%;
     
@@ -25,7 +26,3 @@ h1 {
     text-align: center;
 }
 
-.col-12 {
-text-align: center;
-
-}
