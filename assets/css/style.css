@@ -1,4 +1,6 @@
+* {
 
+<<<<<<< HEAD
 *
 {
 margin: 0;
@@ -26,20 +28,31 @@ padding: 0;
     padding: 15px 0;
     align-items: center;
     justify-content: space-between;
+=======
+>>>>>>> aad8eb1b13e1328fe713d333b02a85d0920149d8
 }
 
-.navbar ul {
-margin-top: 4%;
-margin-left: 53%;
-} 
+body {
+    min-height: 100vh;
+    background-color: #251749;
+    background-image: url(../img/green.jpg);
+    background-size: cover;
+}
 
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 16px;
+.card {
+    max-width: 1000px;
+    max-height: 1500px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color:rgb(56, 74, 241);
+    margin-top: 8%;
+    margin-left: 20%;
+    
 }
 
 h1 {
+<<<<<<< HEAD
     color: red;
     background-color: white;
 }
@@ -71,3 +84,12 @@ footer {
     
     
     
+=======
+    text-align: center;
+}
+
+.col-12 {
+text-align: center;
+
+}
+>>>>>>> aad8eb1b13e1328fe713d333b02a85d0920149d8
