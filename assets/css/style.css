@@ -1,6 +1,5 @@
 * {
-
-<<<<<<< HEAD
+}
 *
 {
 margin: 0;
@@ -28,8 +27,7 @@ padding: 0;
     padding: 15px 0;
     align-items: center;
     justify-content: space-between;
-=======
->>>>>>> aad8eb1b13e1328fe713d333b02a85d0920149d8
+
 }
 
 body {
@@ -39,19 +37,24 @@ body {
     background-size: cover;
 }
 
-.card {
+.form {
     max-width: 1000px;
     max-height: 1500px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    color:rgb(56, 74, 241);
+    color: white;
+    /*color:rgb(56, 74, 241);*/
     margin-top: 8%;
     margin-left: 20%;
     
 }
 
 h1 {
-<<<<<<< HEAD
+
     color: red;
 }
+
+    text-align: center;
+}
+
