@@ -1,4 +1,32 @@
 * {
+}
+*
+{
+margin: 0;
+padding: 0;
+}
+ body {
+    background: white;
+ }
+
+ .header {
+    width:100%;
+    /* background: #aaadb4; */
+     background-image: url(../../assets/img/bg2.jpg.jpg);
+     background-position: center;
+     background-size: cover;
+     height: 100vh;
+     position: relative;
+     font-family: sans-serif;
+ }
+
+ .navbar {
+    width: 86%;
+    display: flex;
+    margin: auto;
+    padding: 15px 0;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
@@ -23,6 +51,10 @@ body {
 }
 
 h1 {
+
+    color: red;
+}
+
     text-align: center;
 }
 
