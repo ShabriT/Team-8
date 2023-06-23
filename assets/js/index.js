@@ -1,7 +1,4 @@
 const task = new taskManager();
-const taskHtml = createTaskHtml('Eze', 'Help', 'html', '06/24/2023', 'Pending');
-console.log(task);
-console.log(taskHtml);
 
 
 
@@ -37,7 +34,9 @@ const taskStatusInput = document.querySelector('#taskStatus');
     if (name == "" || description == "" || assigned == "" || date == ""|| status == "Choose..." ) {
         alert("Please fill all the fields.");
      } else {
-            console.log("name:  " +name ,"description: " + description, "assigned: " + assigned, "date: " + date, "status: " + status);
+        task.addTask(name, description, assigned, date, status);
+        task.render();
+            // console.log("name:  " +name ,"description: " + description, "assigned: " + assigned, "date: " + date, "status: " + status);
         }
     }
  

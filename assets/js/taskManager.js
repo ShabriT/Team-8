@@ -1,7 +1,6 @@
 
- const createTaskHtml = (name, description, assigned, date, status) => {
-
-    const html = `<div class="card">
+ const createTaskHtml = (name, description, assigned, date, status) => ` 
+ <div class="card">
    <div class="card-body bg-info">
      <h5 class="Task-2 text-success fw-bold">Task 2(${name})</h5>
      <div class="col-12">
@@ -12,14 +11,13 @@
          <a href="#" class="btn btn-primary fw-bold">Delete</a>
    </div>
 </div>`;
- return html;
-   }
+ 
    
 
 
 class taskManager {
-    constructor(currentId) {
-        this.currentId = 0;
+    constructor(currentId=0) {
+        this.currentId = currentId;
         this.tasks =[];
 
     
@@ -41,11 +39,7 @@ class taskManager {
            addTask (name, description, assigned, date, status) {
             
             
-            const taskNameInput = document.querySelector('#taskName').value;
-            const taskDescriptionInput = document.querySelector('#taskDescription').value;
-            const taskAssignedInput = document.querySelector('#taskAssigned').value;
-            const taskDueDateInput = document.querySelector('#taskDueDate').value;
-            const taskStatusInput = document.querySelector('#taskStatus').value;
+           
             const task = {
                 id: this.currentId++,
                 name: name,
@@ -67,15 +61,16 @@ class taskManager {
         render() {
             const taskHtmlList = [];
             //for (const task of this.tasks) {
-                for(let i=0; i < 5; i++) {
+                for(let i=0; i < this.tasks.length; i++) {
+                    const task = this.tasks[i];
                 const currentDate = new Date(task.date);
                 const formattedDate = currentDate.getDate();
                 const taskHtml = createTaskHtml (task.name, task.description, task.assigned, formattedDate, task.status);
                 taskHtmlList.push(taskHtml);
             }
-            const tasksHtml = taskHtmlList.join['\n'];
+            const tasksHtml = taskHtmlList.join('\n');
             // This where everything goes wrong
-            const tasksList = document.querySelector('');
+            const tasksList = document.querySelector('#taskList');
 
             tasksList.innerHTML = tasksHtml;
             // for(taskHtmlList = 0; taskHtmlList < 5; taskHtmlList++) {
