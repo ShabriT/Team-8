@@ -1,12 +1,17 @@
 const task = new taskManager();
+const taskHtml = createTaskHtml('Eze', 'Help', 'html', '06/24/2023', 'Pending');
 console.log(task);
+console.log(taskHtml);
 
 
 
-TaskManager.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
-console.log(taskManager.tasks);
+task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
+task.render();
+console.log(task.tasks);
+
 
 const button = document.querySelector('#btnSubmit');
+const form = document.querySelector('#form')
 const taskNameInput = document.querySelector('#taskName');
 const taskDescriptionInput = document.querySelector('#taskDescription');
 const taskAssignedInput = document.querySelector('#taskAssigned');
@@ -36,8 +41,9 @@ const taskStatusInput = document.querySelector('#taskStatus');
         }
     }
  
-
-
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+// });
 button.addEventListener('click', validFormFieldInput)
 
 
