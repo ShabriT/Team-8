@@ -1,5 +1,5 @@
 const task = new taskManager();
-const  task1 = getTaskById(taskId);
+ const task1 = task.getTaskById(0);
 
 
 task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
@@ -47,17 +47,20 @@ button.addEventListener('click', validFormFieldInput)
 
 
 
+ const taskListVariable = document.querySelector("#taskList");
 
-tList.addEventListener('click', (event) => {
-    const tList = event.target.matches("#done-button");
-      console.log('this is a good test');
-    // if ()
-    } else {
+taskListVariable.addEventListener('click', (event) => {
+    if (event.target.classList.contains("done-button")) {
+        console.log('this is a good test');
+    }
+    
+     else {
          const parentTask = taskList.parentElement;
          const taskId = taskId.parentElement;
         console.log(parentTask);
     }
-)
+
+})
 
 
  

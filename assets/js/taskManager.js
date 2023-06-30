@@ -4,8 +4,7 @@
    <div class="card-body bg-info">
      <h5 class="Task-2 text-success fw-bold" placeholder=">Task 2(${name})</h5>
      <div class="col-12">
-     <a href="#" class="btn btn-success btn-sm fw-bold float-end" class="done-button">Mark As Done</a></div>
-     
+     <a href="#" class="btn btn-success btn-sm fw-bold float-end done-button">Mark As Done</a></div>
      <h5 class="text-description fw-bold"><small>Description(${description})</small></h5> <br>
          <h5 class="assigned-to fw-bold"><small>Assigned to(${assigned})</small></h5> <br>
          <h5 class="due-date fw-bold"><small>Due Date: (${date})</small></h5> <br>
@@ -35,6 +34,7 @@ class taskManager {
         }
      }
     
+    
 // constructor(currentId) {
 //         this.task = [];
 //         this.currentId = currentId;
@@ -62,13 +62,9 @@ class taskManager {
             }
             this.tasks.push(task);
 
-        //     const name = taskNameInput.value;
-        //     const description = taskDescriptionInput.value;
-        //    const assigned = taskAssignedInput.value;
-        //    const date = taskDueDateInput.value;
-        //    const status = taskStatusInput.value;
+        
         }
-        // currentId++;
+       
 
         render() {
             const taskHtmlList = [];
@@ -81,21 +77,11 @@ class taskManager {
                 taskHtmlList.push(taskHtml);
             }
             const tasksHtml = taskHtmlList.join('\n');
-            // This where everything goes wrong
+        
             const tasksList = document.querySelector('#taskList');
 
             tasksList.innerHTML = tasksHtml;
-            // for(taskHtmlList = 0; taskHtmlList < 5; taskHtmlList++) {
-            //     if( ) 
-
+            
                 }
             }
-    //     }
-    // }
-
-// }
-
-    // const currentId = (newTask);
-
-    //     addTask.push(...newtask);
-    //     console.log(addTask);
+    
