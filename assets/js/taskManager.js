@@ -2,10 +2,12 @@
  const createTaskHtml = (name, description, assigned, date, status, id) => ` 
  <div class="card"  data-task-id=(${id})>
    <div class="card-body bg-info">
-     <h5 class="Task-2 text-success fw-bold" placeholder=">Task 2(${name})</h5>
+    
      <div class="col-12">
      <a href="#" class="btn btn-success btn-sm fw-bold float-end done-button">Mark As Done</a></div>
-     <h5 class="text-description fw-bold"><small>Description(${description})</small></h5> <br>
+     <br>
+        <h5 class="Task-2 text-success fw-bold"><small>Task Name(${name})</small></h5> <br>
+        <h5 class="text-description fw-bold"><small>Description(${description})</small></h5> <br>
          <h5 class="assigned-to fw-bold"><small>Assigned to(${assigned})</small></h5> <br>
          <h5 class="due-date fw-bold"><small>Due Date: (${date})</small></h5> <br>
          <h5 class="status fw-bold"><small>Status: (${status})</small></h5> <br>
@@ -49,16 +51,13 @@ class taskManager {
            
 
            addTask (name, description, assigned, date, status) {
-            
-            
-           
             const task = {
                 id: this.currentId++,
                 name: name,
                 description: description,
                 assigned: assigned,
                 date: date,
-                status: 'TODO',
+                status: status,
             }
             this.tasks.push(task);
 
@@ -83,5 +82,25 @@ class taskManager {
             tasksList.innerHTML = tasksHtml;
             
                 }
+
+            save () {
+              const myJson = JSON.stringify(this.tasks);
+              const currentId = JSON.stringify(this.currentId);
+
+              localStorage.setItem("tasksJson", myJson);
+              localStorage.setItem("currentId",currentId);
+            
+            }
+        //    load () {
+
+        //     localStorage.getItem("tasksJson");
+        //     localStorage.getItem("currentId");
+        //     if(currentId) {
+        //         this.currentId = parseInt(this.currentId);
+        //     }
+        //     //const tasksJson = JSON.parse(this.tasks);
+        //    // const Number = JSON.Number(this.currentId);
+        //     //const currentId = JSON.parsein(Number);
+        //    }
             }
     

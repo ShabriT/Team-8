@@ -2,9 +2,13 @@ const task = new taskManager();
  const task1 = task.getTaskById(0);
 
 
+
 task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
+// task.load();
 task.render();
+
 console.log(task.tasks);
+console.log(task.save);
 
 
 const button = document.querySelector('#btnSubmit');
@@ -36,6 +40,7 @@ const taskStatusInput = document.querySelector('#taskStatus');
      } else {
         task.addTask(name, description, assigned, date, status);
         task.render();
+        task.save();
             // console.log("name:  " +name ,"description: " + description, "assigned: " + assigned, "date: " + date, "status: " + status);
         }
     }
@@ -46,7 +51,7 @@ const taskStatusInput = document.querySelector('#taskStatus');
 button.addEventListener('click', validFormFieldInput)
 
 
-
+// Redo this
  const taskListVariable = document.querySelector("#taskList");
 
 taskListVariable.addEventListener('click', (event) => {
