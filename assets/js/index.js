@@ -1,10 +1,12 @@
 const task = new taskManager();
+//
+//task.render();
  const task1 = task.getTaskById(0);
 
 
 
 task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
-// task.load();
+ task.load();
 task.render();
 
 console.log(task.tasks);
@@ -56,13 +58,21 @@ button.addEventListener('click', validFormFieldInput)
 
 taskListVariable.addEventListener('click', (event) => {
     if (event.target.classList.contains("done-button")) {
+        
+        const parentTask = event.target.parentElement.parentElement.parentElement;
+        const taskId = Number(parentTask.dataset.taskId);
+       
+        const currentTask = task.getTaskById(taskId);
+     
+        currentTask.status = 'Done';
+        task.render();
         console.log('this is a good test');
     }
     
      else {
-         const parentTask = taskList.parentElement;
-         const taskId = taskId.parentElement;
-        console.log(parentTask);
+        //  const parentTask = event.target.parentElement.parentElement;
+        //  const taskId = taskId.parentElement;
+        console.log("else");
     }
 
 })

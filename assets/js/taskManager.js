@@ -1,6 +1,6 @@
 
  const createTaskHtml = (name, description, assigned, date, status, id) => ` 
- <div class="card"  data-task-id=(${id})>
+ <div class="card"  data-task-id=${id}>
    <div class="card-body bg-info">
     
      <div class="col-12">
@@ -28,12 +28,12 @@ class taskManager {
      getTaskById(taskId) {
         let foundTask;
         for (let i=0; i<this.tasks.length; i++) {
-            let task = this.tasks[i]
+            let task = this.tasks[i];
             if (task.id === taskId) {
                 foundTask = task;
-                return foundTask;
             }
         }
+        return foundTask;
      }
     
     
@@ -91,16 +91,27 @@ class taskManager {
               localStorage.setItem("currentId",currentId);
             
             }
-        //    load () {
 
-        //     localStorage.getItem("tasksJson");
-        //     localStorage.getItem("currentId");
-        //     if(currentId) {
+        load () {
+            
+            
+        const tasksJson = localStorage.getItem("tasksJson");
+        const currentId = localStorage.getItem("currentId");
+       
+          this.tasks = JSON.parse(tasksJson);
+         this.currentId = Number(currentId);
+         
+
+
+        //  this.tasks = taskarray;
+        
+
+         
+          //     if(currentId) {
         //         this.currentId = parseInt(this.currentId);
         //     }
-        //     //const tasksJson = JSON.parse(this.tasks);
         //    // const Number = JSON.Number(this.currentId);
         //     //const currentId = JSON.parsein(Number);
-        //    }
-            }
+          }
+          }
     
