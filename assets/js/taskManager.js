@@ -11,7 +11,7 @@
          <h5 class="assigned-to fw-bold"><small>Assigned to(${assigned})</small></h5> <br>
          <h5 class="due-date fw-bold"><small>Due Date: (${date})</small></h5> <br>
          <h5 class="status fw-bold"><small>Status: (${status})</small></h5> <br>
-         <a href="#" class="btn btn-primary fw-bold">Delete</a>
+         <a href="#" class="btn btn-primary fw-bold delete-button">Delete</a>
    </div>
 </div>`;
  
@@ -101,17 +101,19 @@ class taskManager {
           this.tasks = JSON.parse(tasksJson);
          this.currentId = Number(currentId);
          
+          }
+
+          deleteTask (taskId) {
+            const newTasks = [];
+            for(let j=0; j < this.tasks.length; j++) {
+                const task = this.tasks[j];
+                if(task.id != taskId) {
+                    newTasks.push(task);
+                    this.tasks = newTasks;
+                }
+            }
 
 
-        //  this.tasks = taskarray;
-        
-
-         
-          //     if(currentId) {
-        //         this.currentId = parseInt(this.currentId);
-        //     }
-        //    // const Number = JSON.Number(this.currentId);
-        //     //const currentId = JSON.parsein(Number);
           }
           }
     
