@@ -1,19 +1,21 @@
 
  const createTaskHtml = (name, description, assigned, date, status, id) => ` 
  <div class="card"  data-task-id=${id}>
-   <div class="card-body bg-info">
+   <div class="card-body bg-success">
     
      <div class="col-12">
-     <a href="#" class="btn btn-success btn-sm fw-bold float-end done-button">Mark As Done</a></div>
+     <a href="#" class="btn btn-primary btn-sm fw-bold float-end done-button">Mark As Done</a>
+     </div>
      <br>
-        <h5 class="Task-2 text-success fw-bold"><small>Task Name(${name})</small></h5> <br>
-        <h5 class="text-description fw-bold"><small>Description(${description})</small></h5> <br>
-         <h5 class="assigned-to fw-bold"><small>Assigned to(${assigned})</small></h5> <br>
-         <h5 class="due-date fw-bold"><small>Due Date: (${date})</small></h5> <br>
-         <h5 class="status fw-bold"><small>Status: (${status})</small></h5> <br>
+        <h5 class="Task-2 text-light fw-bold"><small>Task Name: ${name}</small></h5> <br>
+        <h5 class="text-description text-light fw-bold"><small>Description: ${description}</small></h5> <br>
+         <h5 class="assigned-to text-light fw-bold"><small>Assigned to: ${assigned}</small></h5> <br>
+         <h5 class="due-date text-light fw-bold"><small>Due Date: ${date}</small></h5> <br>
+         <h5 class="status text-light fw-bold"><small>Status: ${status}</small></h5> <br>
          <a href="#" class="btn btn-primary fw-bold delete-button">Delete</a>
    </div>
 </div>`;
+
  
    
 
@@ -98,8 +100,14 @@ class taskManager {
         const tasksJson = localStorage.getItem("tasksJson");
         const currentId = localStorage.getItem("currentId");
        
-          this.tasks = JSON.parse(tasksJson);
-         this.currentId = Number(currentId);
+          if(tasksJson) {
+            this.tasks = JSON.parse(tasksJson);
+          } 
+
+          if(currentId) {
+            this.currentId = Number(currentId);
+          }
+         
          
           }
 
@@ -115,5 +123,10 @@ class taskManager {
 
 
           }
-          }
+          
+          
+           }
+
+
+          
     

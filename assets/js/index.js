@@ -1,11 +1,11 @@
 const task = new taskManager();
-//
+
 //task.render();
  const task1 = task.getTaskById(0);
 
 
 
-task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
+//task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
  task.load();
 task.render();
 
@@ -20,6 +20,7 @@ const taskDescriptionInput = document.querySelector('#taskDescription');
 const taskAssignedInput = document.querySelector('#taskAssigned');
 const taskDueDateInput = document.querySelector('#taskDueDate');
 const taskStatusInput = document.querySelector('#taskStatus');
+
 
  
  const validFormFieldInput = (event) => {
@@ -40,17 +41,22 @@ const taskStatusInput = document.querySelector('#taskStatus');
     if (name == "" || description == "" || assigned == "" || date == ""|| status == "Choose..." ) {
         alert("Please fill all the fields.");
      } else {
+      
         task.addTask(name, description, assigned, date, status);
         task.render();
         task.save();
+        form.reset();
+        
             // console.log("name:  " +name ,"description: " + description, "assigned: " + assigned, "date: " + date, "status: " + status);
         }
+        
     }
  
 // form.addEventListener('submit', (event) => {
 //     event.preventDefault();
 // });
 button.addEventListener('click', validFormFieldInput)
+//button.addEventListener('click', document.getElementById('form').value = '');
 
 
 // Redo this
