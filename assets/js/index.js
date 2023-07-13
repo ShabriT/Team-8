@@ -1,12 +1,8 @@
 const task = new taskManager();
-
-//task.render();
- const task1 = task.getTaskById(0);
-
-
+const task1 = task.getTaskById(0);
 
 //task.addTask('John', 'Help', 'html', '06/24/2023', 'Pending');
- task.load();
+task.load();
 task.render();
 
 console.log(task.tasks);
@@ -30,37 +26,27 @@ const taskStatusInput = document.querySelector('#taskStatus');
     const assigned = taskAssignedInput.value;
     const date = taskDueDateInput.value;
     const status = taskStatusInput.value;
-    //console.log("name:  " + name);
-    /*if (name == ""  ) {
-        alert("Fill it ");
-     } else {
-            console.log("name:  " +name);
-        }
-    }*/
+   
 
     if (name == "" || description == "" || assigned == "" || date == ""|| status == "Choose..." ) {
         alert("Please fill all the fields.");
-     } else {
-      
+     } 
+     else 
+     {
         task.addTask(name, description, assigned, date, status);
         task.render();
         task.save();
         form.reset();
-        
-            // console.log("name:  " +name ,"description: " + description, "assigned: " + assigned, "date: " + date, "status: " + status);
-        }
-        
     }
+        
+}
  
-// form.addEventListener('submit', (event) => {
-//     event.preventDefault();
-// });
+
 button.addEventListener('click', validFormFieldInput)
-//button.addEventListener('click', document.getElementById('form').value = '');
 
 
-// Redo this
- const taskListVariable = document.querySelector("#taskList");
+const taskListVariable = document.querySelector("#taskList");
+
 
 taskListVariable.addEventListener('click', (event) => {
     if (event.target.classList.contains("done-button")) {
@@ -76,8 +62,6 @@ taskListVariable.addEventListener('click', (event) => {
     }
     
      else {
-        //  const parentTask = event.target.parentElement.parentElement;
-        //  const taskId = taskId.parentElement;
         console.log("else");
     }
 
@@ -87,17 +71,16 @@ taskListVariable.addEventListener('click', (event) => {
     if (event.target.classList.contains("delete-button")) {
         
         const parentTask = event.target.parentElement.parentElement.parentElement;
+        //const  delVariable= parentTask;
         const taskId = Number(parentTask.dataset.taskId);
-       
-        const delTask = task.deleteTask(taskId);
-        const saveTask = task.save(taskId);
-       task.render();
+       //const taskId = Number(delVariable.document.getTaskById('data-task-id'));
+        task.deleteTask(taskId);
+        task.save();
+        task.render();
       
     }
     
      else {
-        //  const parentTask = event.target.parentElement.parentElement;
-        //  const taskId = taskId.parentElement;
         console.log("else");
     }
 
