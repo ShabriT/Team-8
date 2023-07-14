@@ -61,30 +61,22 @@ taskListVariable.addEventListener('click', (event) => {
         console.log('this is a good test');
     }
     
-     else {
-        console.log("else");
-    }
-
-})
-
-taskListVariable.addEventListener('click', (event) => {
-    if (event.target.classList.contains("delete-button")) {
+      if (event.target.classList.contains("delete-button")) {
         
-        const parentTask = event.target.parentElement.parentElement.parentElement;
-        //const  delVariable= parentTask;
-        const taskId = Number(parentTask.dataset.taskId);
-       //const taskId = Number(delVariable.document.getTaskById('data-task-id'));
-        task.deleteTask(taskId);
-        task.save();
-        task.render();
-      
+                    const parentTask = event.target.parentElement.parentElement;
+                    console.log(parentTask);
+                    const taskId = Number(parentTask.dataset.taskId);
+                    task.deleteTask(taskId);
+                    task.save();
+                    task.render();  
+                }
+                 else {
+                    console.log("else");
+                }
+            
     }
-    
-     else {
-        console.log("else");
-    }
+)
 
-})
 
 
  
